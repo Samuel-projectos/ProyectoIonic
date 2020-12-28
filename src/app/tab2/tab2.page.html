@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Pedido
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <h1 style="text-align: center;">Tu pedido</h1>
+  <div *ngFor="let item of list">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>{{i}} {{item.name}}</ion-card-title>
+        <ion-card-subtitle>{{item.description}}</ion-card-subtitle>
+      </ion-card-header>
+    
+      <ion-card-content>
+        {{item.prize}} €
+        <br>
+        <ion-button color="primary" (click)="getDelect(item)">Eliminar</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <ion-button color="primary" (click)="getSelectList()">Comprar</ion-button>
+
+</ion-content>

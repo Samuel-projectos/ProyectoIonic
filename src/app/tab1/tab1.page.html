@@ -1,0 +1,78 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Menú
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <h3>Por comodidad para el cliente, el pedido se realiza con el botón al final del listado de productos. Gracias</h3>
+  <br>
+  <h1 style="text-align: center;">ENTRANTES</h1>
+  <div *ngFor="let item of initPlate">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>{{item.name}}</ion-card-title>
+        <ion-card-subtitle>{{item.description}}</ion-card-subtitle>
+      </ion-card-header>
+    
+      <ion-card-content>
+        {{item.prize}} €
+        <br>
+        <ion-button color="primary" (click)="getSelect(item)">Seleccionar</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <h1 style="text-align: center;">MONTADITOS</h1>
+  <div *ngFor="let item of montadito">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>{{item.name}}</ion-card-title>
+        <ion-card-subtitle>{{item.description}}</ion-card-subtitle>
+      </ion-card-header>
+    
+      <ion-card-content>
+        {{item.prize}} €
+        <br>
+        <ion-button color="primary" (click)="getSelect(item)">Seleccionar</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <h1 style="text-align: center;">BEBIDAS</h1>
+  <div *ngFor="let item of drinks">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>{{item.name}}</ion-card-title>
+        <ion-card-subtitle>{{item.description}}</ion-card-subtitle>
+      </ion-card-header>
+    
+      <ion-card-content>
+        {{item.prize}} €
+        <br>
+        <ion-button color="primary" (click)="getSelect(item)">Seleccionar</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <h1 style="text-align: center;">PLATOS DE LA CASA</h1>
+  <div *ngFor="let item of plateHouse">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>{{item.name}}</ion-card-title>
+        <ion-card-subtitle>{{item.description}}</ion-card-subtitle>
+      </ion-card-header>
+    
+      <ion-card-content>
+        {{item.prize}} €
+        <br>
+        <ion-button color="primary" (click)="getSelect(item)">Seleccionar</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <br>
+  <ion-button color="primary" (click)="getSelectList()">Realizar Pedido</ion-button>
+
+</ion-content>
